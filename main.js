@@ -1,9 +1,9 @@
 
-import * as architecture from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard@master/front-end/data/architecture/architecture.js';
-import * as ui from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard@master/front-end/ui/export.js'
-import { Flow } from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard@master/front-end/ui/element-group/flow.js'
-import { UI } from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard@master/front-end/data/architecture/ui.js'
-import { Database } from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard@master/front-end/data/architecture/database.js'
+import * as architecture from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/data/architecture/architecture.js';
+import * as ui from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/ui/export.js'
+import { Flow } from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/ui/element-group/flow.js'
+import { UI } from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/data/architecture/ui.js'
+import { Database } from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/data/architecture/database.js'
 
 var design = new architecture.Design()
 design.addProcess(new architecture.Process('js','Process','process'))
