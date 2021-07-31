@@ -5,7 +5,7 @@ import {DesignElement} from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/f
 
 const parent = document.body;
 const flowly =  new FlowAboard(parent)
-const design = await DesignElement.loadDesign('https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/abstract.js')
+const design = await DesignElement.loadDesign('https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/flowdesign/abstract.js')
 
 const flow = await flowly.load(design)
 parent.appendChild(flow)
