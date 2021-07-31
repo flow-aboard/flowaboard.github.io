@@ -1,11 +1,3 @@
-
-
-import { Design, DesignElement, FlowDesigns } from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/flowdesign/design.js';
-
-
-
-
-
 import FlowAboard from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/flowaboard.js'
 
 import {DesignElement} from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/flowdesign/design.js'
