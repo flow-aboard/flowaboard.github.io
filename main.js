@@ -2,7 +2,7 @@ import FlowAboard from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-
 
 import {DesignElement} from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/flowdesign/design.js'
 
-import Debugger from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/lib/debugger.js';
+import Debugger from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/lib/debugger.js';
 
 Debugger.debugs={
     'el-ui-board':true,
