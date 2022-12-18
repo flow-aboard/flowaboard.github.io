@@ -2,13 +2,40 @@ import FlowAboard from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-
 
 import {DesignElement} from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/flowdesign/design.js'
 
+import Debugger from 'https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/lib/debugger.js';
 
-const parent = document.body;
-const flowly =  new FlowAboard(parent)
-const design = await DesignElement.loadDesign('https://cdn.jsdelivr.net/gh/flowaboard/flowaboard/front-end/flowdesign/abstract.js')
+Debugger.debugs={
+    'el-ui-board':true,
+    'el-ui-flow':true,
+}
 
-const flow = await flowly.load(design)
-parent.appendChild(flow)
+const abstractContent = document.body.querySelector('.content');
+const flowly = new FlowAboard(abstractContent)
+var paths = (location.pathname || "").substring(1).split('/')
+let currentDesignElement, currentDesign;
+for (let path of paths) {
+    if (currentDesign && path) {
+        currentDesignElement = currentDesign.getElement(path)
+    } else if(path){
+        let designId = location.origin + `/flowdesign/${path}/index.js`||"https://flowaboard.github.io/abstract/index.js"
+        currentDesignElement = await new DesignElement(path, path, path, 'flow-info', designId)
+    }else{
+        path = 'abstract';
+        let designId = location.origin + `/flowdesign/${path}/index.js`
+        currentDesignElement = await new DesignElement(path, path, path, 'flow-info', designId)
+    }
+}
+
+
+const flow = await flowly.load(currentDesignElement)
+abstractContent.appendChild(flow)
+
+
+
+
+
+
+
 
 
 
